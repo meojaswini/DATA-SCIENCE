@@ -1,0 +1,16 @@
+Let’s Code
+MLxtend can be installed using pip, so make sure that is done before trying to execute any of the code. Once it is installed, the code shows how to get it up and running. 
+I have made the notebook available so feel free to follow along with the examples.
+we need to consolidate the items into 1 transaction per row with each product 1 hot encoded. For the sake of keeping the data set small, I’m only looking at sales for France. 
+However, in additional code, I will compare these results to sales from Germany. Further country comparisons would be interesting to investigate.
+Here’s what the first few columns look like (Please look into the code and note, I added some numbers to the columns to illustrate the concept - the actual data in this example is all 0’s)
+There are a lot of zeros in the data but we also need to make sure any positive values are converted to a 1 and anything less the 0 is set to 0. 
+The next step will complete the one hot encoding of the data and remove the postage column (since that charge is not one we wish to explore).
+Now that the data is structured properly, we can generate frequent item sets that have a support of at least 1% (this number was chosen so that I could get enough useful examples).
+The final step is to generate the rules with their corresponding support, confidence and lift.
+That’s all there is to it! Build the frequent items using apriori then build the rules with association_rules .
+
+Now, the tricky part is figuring out what this tells us. For instance, we can see that there are quite a few rules with a high lift value which means that it occurs more frequently than would be expected given the number of transaction and product combinations. We can also see several where the confidence is high as well. 
+This part of the analysis is where the domain knowledge will come in handy. Since I do not have that, I’ll just look for a couple of illustrative examples.
+
+Next part is to design a simple recommendation system using If-Else just to test frequent item sets.
