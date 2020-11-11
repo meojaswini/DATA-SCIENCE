@@ -1,0 +1,7 @@
+On first week we have performed exploratory data analysis to see all kinds of relationships.
+At first, we have designed a wordcloud which show item names with varying font size and item with maximum font size and intensity have been bought for maximum times.
+Second we have plotted several plots to see relationship between purchase frequecy and price and next to see relationship between product and average ordered quantity.
+Purchase frequency can be calculated as No. of times that item was bought divided by 373(Total no. of days for which the online retail dataset has been recorded).
+Average ordered quantity can be calculated as quantity divided by no. of times that item was bought.
+
+## The output folder contains all the graphs and wordcloud image separately.
